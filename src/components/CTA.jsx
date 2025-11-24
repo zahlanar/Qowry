@@ -31,39 +31,37 @@ const CTA = () => {
           </p>
           
           <div className="cta-buttons" style={{ position: 'relative', zIndex: 1 }}>
-            <button style={{ 
-              background: 'black', 
-              color: 'white', 
-              padding: '12px 24px', 
-              borderRadius: '12px', 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '10px',
-              border: '1px solid rgba(255,255,255,0.2)'
-            }}>
-              <div style={{ fontSize: '24px' }}></div>
-              <div style={{ textAlign: 'left' }}>
-                <div style={{ fontSize: '10px' }}>Download on the</div>
-                <div style={{ fontSize: '16px', fontWeight: '600' }}>App Store</div>
-              </div>
-            </button>
+            <a href="#" style={{ display: 'block' }}>
+              <img 
+                src="/app-store.png" 
+                alt="Download on the App Store" 
+                style={{ 
+                  height: '60px', 
+                  width: 'auto', 
+                  cursor: 'pointer', 
+                  transition: 'transform 0.2s',
+                  filter: 'brightness(1.1)'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              />
+            </a>
             
-            <button style={{ 
-              background: 'black', 
-              color: 'white', 
-              padding: '12px 24px', 
-              borderRadius: '12px', 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '10px',
-              border: '1px solid rgba(255,255,255,0.2)'
-            }}>
-              <div style={{ fontSize: '24px' }}>▶</div>
-              <div style={{ textAlign: 'left' }}>
-                <div style={{ fontSize: '10px' }}>GET IT ON</div>
-                <div style={{ fontSize: '16px', fontWeight: '600' }}>Google Play</div>
-              </div>
-            </button>
+            <a href="#" style={{ display: 'block' }}>
+              <img 
+                src="/google-play.png" 
+                alt="Get it on Google Play" 
+                style={{ 
+                  height: '60px', 
+                  width: 'auto', 
+                  cursor: 'pointer', 
+                  transition: 'transform 0.2s',
+                  filter: 'brightness(1.1)'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              />
+            </a>
           </div>
         </motion.div>
       </div>

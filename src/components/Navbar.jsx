@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
+import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -29,17 +29,17 @@ const Navbar = () => {
       padding: '20px 0'
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div className="logo" style={{ fontSize: '24px', fontWeight: '700', color: 'var(--primary-blue)', display: 'flex', alignItems: 'center', gap: '8px', zIndex: 1001 }}>
+        <Link to="/" className="logo" style={{ fontSize: '24px', fontWeight: '700', color: 'var(--primary-blue)', display: 'flex', alignItems: 'center', gap: '8px', zIndex: 1001, textDecoration: 'none' }}>
           <img src="/qwory-logo.png" alt="Qwory" style={{ width: '40px', height: '40px' }} />
           Qwory
-        </div>
+        </Link>
         
         {/* Desktop Menu */}
         <div className="nav-links" style={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
-          <a href="#features" style={{ fontWeight: '500', color: 'var(--text-main)' }}>Features</a>
-          <a href="#how-it-works" style={{ fontWeight: '500', color: 'var(--text-main)' }}>How it Works</a>
-          <a href="#testimonials" style={{ fontWeight: '500', color: 'var(--text-main)' }}>Stories</a>
-          <button className="btn-primary" style={{ padding: '10px 24px', fontSize: '14px' }}>Download App</button>
+          <a href="/#features" style={{ fontWeight: '500', color: 'var(--text-main)' }}>Features</a>
+          <a href="/#how-it-works" style={{ fontWeight: '500', color: 'var(--text-main)' }}>How it Works</a>
+          <a href="/#testimonials" style={{ fontWeight: '500', color: 'var(--text-main)' }}>Stories</a>
+          <Link to="/download" className="btn-primary" style={{ padding: '10px 24px', fontSize: '14px', textDecoration: 'none', display: 'inline-block' }}>Download App</Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -68,10 +68,10 @@ const Navbar = () => {
               borderBottom: '1px solid var(--border-color)'
             }}
           >
-            <a href="#features" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: '500', color: 'var(--text-main)', fontSize: '18px' }}>Features</a>
-            <a href="#how-it-works" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: '500', color: 'var(--text-main)', fontSize: '18px' }}>How it Works</a>
-            <a href="#testimonials" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: '500', color: 'var(--text-main)', fontSize: '18px' }}>Stories</a>
-            <button className="btn-primary" style={{ width: '100%', maxWidth: '300px' }}>Download App</button>
+            <a href="/#features" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: '500', color: 'var(--text-main)', fontSize: '18px' }}>Features</a>
+            <a href="/#how-it-works" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: '500', color: 'var(--text-main)', fontSize: '18px' }}>How it Works</a>
+            <a href="/#testimonials" onClick={() => setMobileMenuOpen(false)} style={{ fontWeight: '500', color: 'var(--text-main)', fontSize: '18px' }}>Stories</a>
+            <Link to="/download" onClick={() => setMobileMenuOpen(false)} className="btn-primary" style={{ width: '100%', maxWidth: '300px', textAlign: 'center', textDecoration: 'none' }}>Download App</Link>
           </motion.div>
         )}
       </div>

@@ -1,25 +1,22 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Partners from './components/Partners';
-import Features from './components/Features';
-import HowItWorks from './components/HowItWorks';
-import Testimonials from './components/Testimonials';
-import CTA from './components/CTA';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import DownloadPage from './pages/DownloadPage';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <Hero />
-      <Partners />
-      <Features />
-      <HowItWorks />
-      <Testimonials />
-      <CTA />
-      <Footer />
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/download" element={<DownloadPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
