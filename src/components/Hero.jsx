@@ -33,9 +33,25 @@ const Hero = () => {
             Join the secure peer-to-peer marketplace. Negotiate real-time rates, exchange instantly, and save on every transaction.
           </p>
           
-          <div className="hero-buttons" style={{ display: 'flex', gap: '16px' }}>
-            <button className="btn-primary">Get Started</button>
-            <button className="btn-secondary">View Demo</button>
+          <div className="hero-buttons" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+            <a href="#" style={{ display: 'block' }}>
+              <img 
+                src="/app-store.png" 
+                alt="Download on the App Store" 
+                style={{ height: '50px', width: 'auto', cursor: 'pointer', transition: 'transform 0.2s' }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              />
+            </a>
+            <a href="#" style={{ display: 'block' }}>
+              <img 
+                src="/google-play.png" 
+                alt="Get it on Google Play" 
+                style={{ height: '50px', width: 'auto', cursor: 'pointer', transition: 'transform 0.2s' }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              />
+            </a>
           </div>
           
           <div style={{ marginTop: '40px', display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'inherit' }}>
